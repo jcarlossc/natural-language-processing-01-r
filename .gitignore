@@ -34,6 +34,5 @@ renv/.cache/
 *.rdata
 
 # Diretórios comuns de saída
-/output/
 /results/
 /figures/
