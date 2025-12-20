@@ -14,7 +14,7 @@ library(htmlwidgets)
 # precisos para auditoria, interpretação e reprodutibilidade da análise.
 
 
-# Leitura dos dados pré-processados
+# Leitura dos dados pré-processados.
 texto <- read_csv("data/processed/processed_text.csv")
 
 ui <- fluidPage(
@@ -35,16 +35,16 @@ ui <- fluidPage(
   )
 )
 
-# Servidor
+# Servidor.
 server <- function(input, output, session) {
   
-  # Frequência das palavras
+  # Frequência das palavras.
   frequencia <- reactive({
     texto %>%
       count(palavra, sort = TRUE)
   })
   
-  # Nuvem de palavras
+  # Nuvem de palavras.
   output$nuvem <- renderWordcloud2({
     wordcloud2(
       data = frequencia(),
@@ -54,13 +54,13 @@ server <- function(input, output, session) {
     )
   })
   
-  # Tabela de frequência
+  # Tabela de frequência.
   output$tabela <- renderTable({
     frequencia()
   })
 }
 
-# Executa a aplicação
+# Executa a aplicação.
 shinyApp(ui, server)
 
 
