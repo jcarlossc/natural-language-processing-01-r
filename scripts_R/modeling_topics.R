@@ -10,6 +10,7 @@ library(topicmodels)
 library(tm)
 library(tidytext)
 library(reshape2)
+library(dplyr)
 
 
 # Caminho do arquivo contendo o texto pré-processado da LGPD.
