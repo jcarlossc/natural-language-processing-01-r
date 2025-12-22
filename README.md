@@ -46,24 +46,29 @@ Neste projeto, são utilizadas técnicas clássicas e amplamente aceitas, como:
 ## 📌 Estrutura do Projeto
 ```
 projeto-nlp-r/
-│
+│── app/                        # Dashboard interativo
 ├── data/
-│   ├── raw/                  # Textos originais (CSV, TXT, HTML)
-│   └── processed/            # Textos pré-processados
-│
-├── scripts/
-│   ├── 01_preprocessamento.R # Limpeza e normalização dos textos
-│   ├── 02_processamento.R    # Tokenização, frequência, TF-IDF
-│   └── 03_modelagem.R        # LDA / STM
-│
-├── shiny/
-│   └── app.R                 # Dashboard interativo
-│
-├── reports/
-│   └── relatorio_nlp.Rmd     # Relatório técnico em R Markdown
-│
+│   ├── raw/                    # Textos originais (TXT)
+│   └── processed/              # Textos pré-processados
+│── images/                     # Imagens dos gráficos
+│── preview/
+│   ├── topic_graph.R           # Gráfico de tópicos
+│   ├── frequency_graph.R       # Gráfico de frequência     
+│   └── graph_relevant_terms.R  # Gráfico de termos relavantes 
+├── scripts_R/
+│   ├── load_data.R             # Carregamento dos dados
+│   ├── modeling_topics.R       # Modelagem de tópicos (LDA)
+│   ├── preprocessing.R         # Pré-processamento de texto     
+│   └── processing.R            # Processamento de texto     
+│── .gitignore
+│── .RData
+│── .Rhistory
+│── .Rprofile
+│── main                        # Script principal
+│── natural-language-processing-01-r.Rproj
+│── README              
 ├── README.md
-└── renv.lock (opcional)
+└── renv.lock 
 
 ```
 
@@ -134,32 +139,30 @@ O dashboard Shiny permite:
 
 ## 📌 Como executar o Projeto
 
-1. Pré-requisitos:
+1. 📌 Pré-requisitos:
 
 * [Linguagem R](https://cran.r-project.org/) instalada (versão recomendada: ≥ 4.5.1)
 * [RStudio](https://posit.co/download/rstudio-desktop/) instalado
 * Instalação da [Linguagem R:](https://informaticus77-r.blogspot.com/2025/09/blog-post.html)
 * Microtutorial [RStudio:](https://informaticus77-r.blogspot.com/2025/09/blog-post_8.html)
 
-2. Clonar este repositório
+2. 📌 Clonar este repositório
 
-Abra o terminal e execute:
+- Abra o terminal e execute:
 ```bash
 git clone https://github.com/jcarlossc/natural-language-processing-01-r.git
 cd natural-language-processing-01-r
 ```
-3. Ativar ambiente virtual
+3. 📌 Ativar ambiente virtual
 
-Este projeto utiliza o pacote renv para gerenciar dependências de forma reprodutível.
-
-Abra o projeto no RStudio.
-Instalar as dependências:
+- Abra o projeto no RStudio.
+- Instalar as dependências:
 ```
 # Este comando deve ser executado no console do RStudio.
 
 renv::restore()    # Instala as dependências
 ```
-4. Executar o Projeto
+4. 📌 Executar o Projeto
 
 ```
 source("main.R")
@@ -167,3 +170,41 @@ source("main.R")
 
 ---
 
+## 📌 Reprodutibilidade
+
+O projeto pode utilizar renv para controle de versões dos pacotes, garantindo que os resultados sejam reproduzíveis em diferentes ambientes.
+
+---
+
+## 📌 Sobre
+Este material foi criado para servir como introdução ao R, com exemplos simples e organizados para facilitar o aprendizado inicial.
+
+---
+
+## 📌 Contribuições
+Se quiser contribuir:
+1. Faça um fork deste repositório
+2. Crie uma branch para sua feature ou correção (git checkout -b minha-feature)
+3. Faça commits descritos claramente
+4. Submeta um Pull Request
+
+---
+
+## 📌 Licença
+Este projeto está licenciado sob a MIT License.
+
+---
+
+## 📌 Contatos
+📌Autor: Carlos da Costa<br>
+📌Recife, PE - Brasil<br>
+📌Telefone: +55 81 99712 9140<br>
+📌Telegram: @jcarlossc<br>
+📌Pypi: [https://pypi.org/user/jcarlossc/](https://pypi.org/user/jcarlossc/)><br>
+📌Blogger linguagem R: [https://informaticus77-r.blogspot.com/](https://informaticus77-r.blogspot.com/)<br>
+📌Blogger linguagem Python: [https://informaticus77-python.blogspot.com/](https://informaticus77-python.blogspot.com/)<br>
+📌Email: jcarlossc1977@gmail.com<br>
+📌LinkedIn: https://www.linkedin.com/in/carlos-da-costa-669252149/<br>
+📌GitHub: https://github.com/jcarlossc<br>
+📌Kaggle: https://www.kaggle.com/jcarlossc/  
+📌Twitter/X: https://x.com/jcarlossc1977
