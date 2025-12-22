@@ -15,7 +15,7 @@ library(htmlwidgets)
 
 
 # Leitura dos dados pré-processados.
-texto <- read_csv("data/processed/processed_text.csv")
+texto <- read_csv("../data/processed/processed_text.csv")
 
 ui <- fluidPage(
   titlePanel("Análise de Texto"),
