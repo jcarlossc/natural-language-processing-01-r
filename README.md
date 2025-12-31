@@ -160,7 +160,7 @@ cd natural-language-processing-01-r
 ```
 # Este comando deve ser executado no console do RStudio.
 
-renv::restore()    # Instala as dependências
+renv::restore()    
 ```
 4. 📌 Executar o Projeto
 
@@ -208,3 +208,4 @@ Este projeto está licenciado sob a MIT License.
 📌GitHub: https://github.com/jcarlossc<br>
 📌Kaggle: https://www.kaggle.com/jcarlossc/  
 📌Twitter/X: https://x.com/jcarlossc1977
+
